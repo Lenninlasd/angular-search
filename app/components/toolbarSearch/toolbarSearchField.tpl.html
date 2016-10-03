@@ -8,7 +8,6 @@
                 <i class="glyphicon glyphicon-search"></i>
             </span>
         </span>
-
      </div>
 </div>
 <div class="col-xs-3 padding-search">
@@ -23,6 +22,11 @@
     </span>
 </div>
 <div class="col-xs-12 padding-search" style="padding-top: 8px;">
+    <div class="btn-group pull-left">
+        <label class="btn btn-default btn-xs btn-tag" ng-class="{active: tagSwitch.value}">
+            <input type="checkbox" autocomplete="off" ng-model="tagSwitch.value" ng-change="toggleSuggestKeywords()" ng-disabled="tagSwitch.disable"> Tag
+        </label>
+    </div>
     <keyword  ng-repeat="keyword in suggestedKeywords" class="keyword-min"
         ng-click="addSuggestedKeywordToSearchInput(keyword.value)" remove="false" tag="{{keyword.value}}"></keyword>
 </div>
