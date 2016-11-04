@@ -6,7 +6,7 @@ describe( 'HeatmapResultCounter', function() {
     beforeEach( inject( function($compile, $controller, $rootScope) {
         rootScope = $rootScope;
         $scope = $rootScope.$new();
-        element = angular.element('<tweet-counter></tweet-counter>');
+        element = angular.element('<tweet-pagination></tweet-pagination>');
         compiledElement = $compile(element)($scope);
         $scope.$digest();
         scope = compiledElement.isolateScope();

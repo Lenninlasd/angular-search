@@ -15,6 +15,7 @@
             textLimit: null,
             userLimit: null,
             numOfDocs: 50,
+            from: 50,
             minDate: new Date('2013-03-10'),
             maxDate: new Date('2013-03-21')
         };

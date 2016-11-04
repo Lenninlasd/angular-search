@@ -1,0 +1,9 @@
+<div class="count-padding">
+    <p ng-show="counter">Results for keyword: {{counter}}</p>
+
+    <button ng-disabled="!hasPrevious()" ng-click="previousPage();" class="btn btn-default">Previous</button>
+    <button ng-disabled="!hasNext()" ng-click="nextPage();" class="btn btn-default">Next</button>
+    <span class="text-muted">
+      Showing {{pagination.showdocs}} of {{pagination.sizeDocuments}} - Page {{pagination.currentPage}} / {{pagination.pages}}
+    </span>
+</div>
