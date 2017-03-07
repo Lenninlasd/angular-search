@@ -74,7 +74,6 @@
     <script src="./app/components/exportButton/exportButtonDirective.js"></script>
     <script src="./app/components/resetButton/resetButtonDirective.js"></script>
     <script src="./app/components/heatmap/heatmapDirective.js"></script>
-    <script src="./app/components/search/search.js"></script>
     <script src="./app/components/keyword/keywordDirective.js"></script>
     <script src="./app/components/cardwrapper/cardwrapperDirective.js"></script>
     <script src="./app/components/keywordInput/keywordInputDirective.js"></script>
@@ -84,17 +83,8 @@
 
 </head>
 
-<body ng-controller="MainController">
+<body>
 	<ui-view></ui-view>
-    <heatmap></heatmap>
-
-    <responsive-layout></responsive-layout>
-
-    <!-- map popup -->
-    <ng-include src="'./app/view/mapPopup.html'"></ng-include>
-    <!-- info popup -->
-    <ng-include src="'./app/view/infoPopup.html'"></ng-include>
-
 </body>
 
 </html>

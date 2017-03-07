@@ -1,11 +1,11 @@
 {
     "appConfig": {
-        "tweetsSearchBaseUrl": "http://bop.worldmap.harvard.edu/bopws2/tweets/search?",
-        "tweetsExportBaseUrl": "http://bop.worldmap.harvard.edu/bopws2/tweets/export?",
+        "tweetsSearchBaseUrl": "http://bop.worldmap.harvard.edu/bopws/tweets/search?",
+        "tweetsExportBaseUrl": "http://bop.worldmap.harvard.edu/bopws/tweets/export?",
         "ratioInnerBbox": 0.98
     },
     "bopwsConfig": {
-        "heatmapFacetLimit": 10000,
+        "heatmapFacetLimit": 5000,
         "csvDocsLimit": 1
     },
     "mapConfig": {

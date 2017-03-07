@@ -16,15 +16,22 @@
             requireBase: false
         });
         $urlRouterProvider.otherwise('/search');
-        $stateProvider.state({
-            name: 'search',
-            url: '/search?time&geo&text&user',
-            component: 'search',
-            resolve: {
-                search: function($stateParams,HeatMapSourceGenerator,searchFilter) {
-                    searchFilter.setFilter($stateParams);
+        $stateProvider
+            .state({
+                name: 'search',
+                url: '/search?time&geo&text&user',
+                templateUrl: 'view/search.tpl.html',
+                controller: 'MainController',
+                resolve: {
+                    search: function($stateParams,HeatMapSourceGenerator,searchFilter) {
+                        searchFilter.setFilter($stateParams);
+                    }
                 }
-            }
-        });
+            })
+            .state({
+                name: 'config',
+                url: '/config',
+                template: '<h1>My Config</h1>'
+            });
     });
 })();
