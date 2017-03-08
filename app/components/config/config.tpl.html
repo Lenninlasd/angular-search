@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-7">
+            <h2>Base url</h2>
+            <form style="padding-left: 20px">
+                <div class="form-group">
+                    <div class="form-group">
+                        <label>Tweets search base Url</label>
+                        <input ng-model="" type="text" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>Tweets export base Url</label>
+                        <input ng-model="" type="text" class="form-control" placeholder="">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-7">
+            <h2>Dataverse</h2>
+            <form style="padding-left: 20px">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="$ctrl.dataverse.AllowDataverseDeposit">
+                        Check Dataverse deposit {{$ctrl.disabled}}
+                    </label>
+                </div>
+                    <div class="form-group">
+                        <label>Dataverse deposit url</label>
+                        <input ng-model="$ctrl.dataverse.dataverseDepositUrl" type="text"
+                            class="form-control" placeholder="Deposit url" ng-disabled="!$ctrl.dataverse.AllowDataverseDeposit">
+                    </div>
+                    <div class="form-group">
+                        <label>Subset retrieval url</label>
+                        <input ng-model="$ctrl.dataverse.subsetRetrievalUrl" type="text"
+                            class="form-control" placeholder="Subset retrieval" ng-disabled="!$ctrl.dataverse.AllowDataverseDeposit">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Parameters</label>
+                        time: <input type="text" class="form-control" placeholder="time" ng-model="$ctrl.dataverse.parameters.time"
+                            ng-disabled="!$ctrl.dataverse.AllowDataverseDeposit">
+                        keywords: <input type="text" class="form-control" placeholder="keywords" ng-model="$ctrl.dataverse.parameters.keywords"
+                            ng-disabled="!$ctrl.dataverse.AllowDataverseDeposit">
+                        extent: <input type="text" class="form-control" placeholder="extent" ng-model="$ctrl.dataverse.parameters.extent"
+                            ng-disabled="!$ctrl.dataverse.AllowDataverseDeposit">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-default" type="button" name="button" ng-disabled="!$ctrl.dataverse.AllowDataverseDeposit">Save</button>
+                        <a class="btn btn-primary" target="_blank" ng-disabled="!$ctrl.dataverse.AllowDataverseDeposit" href="{{$ctrl.link()}}">Go url</a>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>

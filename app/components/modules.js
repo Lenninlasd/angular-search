@@ -1,5 +1,6 @@
 (function() {
     angular.module('search_components', [
+        'search_config_component',
         'search_timehistogram_component',
         'search_legendhistogram_component',
         'search_datepicker_component',

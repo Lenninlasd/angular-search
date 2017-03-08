@@ -31,7 +31,7 @@
             .state({
                 name: 'config',
                 url: '/config',
-                template: '<h1>My Config</h1>'
+                template: '<config></config>'
             });
     });
 })();
